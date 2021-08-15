@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BiliWidget</string>
+    <string name="appwidget_text">B站粉丝数监控demo</string>
+    <string name="add_widget">添加小组件</string>
+</resources>
