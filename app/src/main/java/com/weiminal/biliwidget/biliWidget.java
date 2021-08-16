@@ -1,10 +1,15 @@
 package com.weiminal.biliwidget;
 
+import android.annotation.SuppressLint;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
 import android.widget.RemoteViews;
+
+import org.json.JSONException;
+
+import java.io.IOException;
 
 /**
  * Implementation of App Widget functionality.
@@ -18,14 +23,29 @@ public class biliWidget extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
-
-        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
+        //显示信息内容
+        /**CharSequence widgetText = context.getString(R.string.appwidget_text);
+           //AS自带
+         **/
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.bili_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
 
-        // Instruct the widget manager to update the widget
-        appWidgetManager.updateAppWidget(appWidgetId, views);
+        Thread thread = new Thread((new Runnable() {
+            @Override
+            public void run() {
+                String dataView = "无法连接网络";
+                try {
+                    dataView = dataGet.dataShow();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                views.setTextViewText(R.id.信息展示, dataView);
+                appWidgetManager.updateAppWidget(appWidgetId, views);
+            }
+        }));
+        thread.start();
+
     }
 
     @Override
