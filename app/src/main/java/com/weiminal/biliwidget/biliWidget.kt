@@ -56,21 +56,14 @@ class biliWidget : AppWidgetProvider() {
             val views = RemoteViews(context.packageName, R.layout.bili_widget)
             val thread = Thread {
                 var dataView = "无法连接网络"
-                try {
-                    dataView = dataGet.dataShow()
-                } catch (e: IOException) {
-                    e.printStackTrace()
-                } catch (e: JSONException) {
-                    e.printStackTrace()
-                }
                 Log.d("TAG", "run: $dataView")
 
                 // 获取信息
-                val info = ApiUtil.getInfo("279991456")
+                val info = ApiUtil.getInfo("35606358")
                 views.setTextViewText(R.id.textView_name, info.getString("name"))
                 Log.d("TAG", "updateAppWidget: " + info.getString("name"))
                 Log.d("TAG", "updateAppWidget: " + info.getString("face"))
-                val infoFollow = ApiUtil.getInfoFollow("279991456")
+                val infoFollow = ApiUtil.getInfoFollow("35606358")
                 views.setTextViewText(
                     R.id.textView_follower,
                     "粉丝数：${infoFollow.getString("follower")}"
