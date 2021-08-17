@@ -1,34 +1,50 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="145dp"
+    android:layout_height="147dp"
+    android:orientation="vertical"
     android:padding="@dimen/widget_margin"
+    android:background="@drawable/shape"
     android:theme="@style/ThemeOverlay.BiliWidget.AppWidgetContainer">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView_head"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+/>
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:text="靠谱电竞"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/textView"
-        android:layout_marginTop="3dp"
-        android:layout_width="145dp"
-        android:layout_height="147dp"
-        android:background="@drawable/shape"
-        android:contentDescription="@string/appwidget_text"
-        android:gravity="center"
-        android:text="@string/appwidget_text"
+        android:id="@+id/textView_follower"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="粉丝数："
         android:textColor="@color/white"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="145dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="150dp"
-        android:gravity="bottom|center"
-        android:text="@string/app_name"
-        android:textSize="10sp"
-        android:textColor="@color/white"/>
-<!--    文字阴影  -by WeiMinal-->
-<!--        android:shadowColor="@color/black"-->
-<!--        android:shadowRadius="3"-->
-<!--        android:shadowDx="0"-->
-<!--        android:shadowDy="0"-->
+    <!--    文字阴影  -by WeiMinal-->
+    <!--        android:shadowColor="@color/black"-->
+    <!--        android:shadowRadius="3"-->
+    <!--        android:shadowDx="0"-->
+    <!--        android:shadowDy="0"-->
 
-</RelativeLayout>
+</LinearLayout>
