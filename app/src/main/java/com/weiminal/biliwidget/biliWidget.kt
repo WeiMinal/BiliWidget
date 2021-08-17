@@ -66,7 +66,7 @@ class biliWidget : AppWidgetProvider() {
                 val infoFollow = ApiUtil.getInfoFollow("35606358")
                 views.setTextViewText(
                     R.id.textView_follower,
-                    "粉丝数：${infoFollow.getString("follower")}"
+                    "B站粉丝  ${infoFollow.getString("follower")}"
                 )
 
                 views.setImageViewBitmap(
