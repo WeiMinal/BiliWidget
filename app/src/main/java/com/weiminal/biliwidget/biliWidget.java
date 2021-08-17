@@ -40,7 +40,7 @@ public class biliWidget extends AppWidgetProvider {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                views.setTextViewText(R.id.信息展示, dataView);
+                views.setTextViewText(R.id.textView, dataView);
                 appWidgetManager.updateAppWidget(appWidgetId, views);
             }
         }));

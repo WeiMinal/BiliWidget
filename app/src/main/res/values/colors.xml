@@ -11,4 +11,8 @@
     <color name="light_blue_200">#FF81D4FA</color>
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
+
+    <color name="bilibili_pink_deep">#EF5D87</color>
+    <color name="bilibili_pink">#FB7299</color>
+    <color name="bilibili_pink_mini">#F791AE</color>
 </resources>

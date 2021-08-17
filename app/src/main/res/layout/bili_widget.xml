@@ -5,14 +5,30 @@
     android:theme="@style/ThemeOverlay.BiliWidget.AppWidgetContainer">
 
     <TextView
-        android:id="@+id/appwidget_text"
-        android:layout_width="200dp"
-        android:layout_height="150dp"
-        android:background="@drawable/shape_bofang"
+        android:id="@+id/textView"
+        android:layout_marginTop="3dp"
+        android:layout_width="145dp"
+        android:layout_height="147dp"
+        android:background="@drawable/shape"
         android:contentDescription="@string/appwidget_text"
-        android:gravity="center_horizontal"
-        android:paddingTop="10dp"
+        android:gravity="center"
         android:text="@string/appwidget_text"
         android:textColor="@color/white"
-        android:textSize="15sp" />
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="145dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="150dp"
+        android:gravity="bottom|center"
+        android:text="@string/app_name"
+        android:textSize="10sp"
+        android:textColor="@color/white"/>
+<!--    文字阴影  -by WeiMinal-->
+<!--        android:shadowColor="@color/black"-->
+<!--        android:shadowRadius="3"-->
+<!--        android:shadowDx="0"-->
+<!--        android:shadowDy="0"-->
+
 </RelativeLayout>

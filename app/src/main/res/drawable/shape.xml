@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <solid android:color="@color/bilibili_pink" />-->
+<!--    渐变色 -by WeiMinal-->
+    <gradient
+        android:type="linear"
+        android:gradientRadius="100%p"
+        android:angle="90"
+        android:startColor="@color/bilibili_pink_mini"
+        android:endColor="@color/bilibili_pink_deep" />
+
+    <corners android:radius="20dp" />
+    <size
+        android:width="80dp"
+        android:height="80dp" />
+</shape>
