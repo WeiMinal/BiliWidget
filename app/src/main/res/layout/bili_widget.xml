@@ -1,21 +1,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?attr/appWidgetBackgroundColor"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:padding="@dimen/widget_margin"
     android:theme="@style/ThemeOverlay.BiliWidget.AppWidgetContainer">
 
     <TextView
-        android:id="@+id/信息展示"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="4dp"
-        android:background="?attr/appWidgetBackgroundColor"
+        android:id="@+id/appwidget_text"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="@drawable/shape_bofang"
         android:contentDescription="@string/appwidget_text"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
         android:text="@string/appwidget_text"
-        android:textColor="?attr/appWidgetTextColor"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 </RelativeLayout>
